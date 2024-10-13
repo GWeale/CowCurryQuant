@@ -36,7 +36,7 @@ void TradingStrategy::trainModel() {
     std::uniform_real_distribution<double> distribution(-1.0, 1.0);
     weights_ = Eigen::VectorXd(features_.cols());
     for (int i = 0; i < weights_.size(); ++i) {
-        weights_(i) = distribution(generator);
+        weights_(i) = distribution(generator); // Random initialization
     }
 
    
