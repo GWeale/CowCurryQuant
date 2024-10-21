@@ -111,7 +111,7 @@ void DataProcessor::calculateEMA(int period) {
     feature_matrix_.col(feature_matrix_.cols() - 1) = ema_vector;
 }
 
-// Calculate Relative Strength Index
+// Find the New strength
 void DataProcessor::calculateRSI(int period) {
     feature_names_.push_back("RSI_" + std::to_string(period));
     std::vector<double> rsi;
